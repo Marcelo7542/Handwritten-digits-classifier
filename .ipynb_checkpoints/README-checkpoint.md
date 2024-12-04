@@ -68,28 +68,3 @@ ClassifierChain com RandomForestClassifier: Para lidar com dependências entre r
 Métricas de Avaliação.
 
 Utilizei o F1-score com média macro para medir o desempenho do modelo.
-
-
-5. Arquivo: Data-Augmentation
-
-
-Neste arquivo, utilizei técnicas de aumento de dados (data augmentation) para aumentar a diversidade do conjunto de treinamento. 
-A principal técnica utilizada foi o deslocamento das imagens em várias direções (direita, esquerda, cima e baixo).
-
-O que foi feito:
-
-Aumento de Dados: Criação de imagens deslocadas para aumentar a quantidade de exemplos no conjunto de treinamento.
-
-Visualização de Erros: Análise das matrizes de confusão para visualizar como o aumento de dados afetou a performance do modelo.
-
-
-Resultados
-O modelo final foi avaliado utilizando várias métricas:
-
-Precisão
-
-Recall
-
-F1-Score
-
-Os modelos foram avaliados com base nas matrizes de confusão.
