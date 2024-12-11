@@ -1,3 +1,5 @@
+English description Below
+
 Eu explorei neste repositório o conjunto de dados MNIST com o objetivo de criar modelos para classificar dígitos escritos à mão. 
 O projeto está estruturado em várias etapas, representadas por diferentes arquivos, cada um abordando aspectos específicos da classificação. 
 Na última etapa, também exploro brevemente a classificação multilabel.
@@ -93,3 +95,119 @@ Recall
 F1-Score
 
 Os modelos foram avaliados com base nas matrizes de confusão.
+
+
+
+
+
+MNIST Dataset Exploration for Handwritten Digit Classification
+
+In this repository, I explored the MNIST dataset with the goal of creating models to classify handwritten digits. The project is structured in several stages, represented by different files, each addressing specific aspects of classification. In the final stage, I also briefly explore multilabel classification.
+
+Project Structure:
+
+1. File: Seeing-Mnist
+   
+I started by exploring the MNIST dataset, analyzing the images and labels to understand its structure. I decided to begin with something simpler: creating a binary classifier to identify the digit 2.
+
+Included:
+
+Data Visualization: 
+
+Displaying images and their labels.
+
+Binary Classification: 
+
+Using SGDClassifier to predict the digit 2.
+
+Evaluation Metrics: 
+
+Confusion matrix, accuracy, recall, F1-score, ROC and PR curves.
+
+2. File:
+
+   Seeing-Mnist-Multiclass
+   
+I extended the classification to multiple classes (from 0 to 9), testing different models and choosing RandomForestClassifier due to the best results.
+
+Models Tested:
+
+SVC
+
+Logistic Regression
+
+SGDClassifier
+
+RandomForestClassifier (final chosen model)
+
+GaussianNB
+
+KNeighborsClassifier
+
+DummyClassifier (baseline)
+
+3. File: Mnist-RFC
+   
+I focused on hyperparameter optimization for the RandomForestClassifier and analyzed the results using detailed confusion matrices.
+
+Hyperparameter Optimization:
+
+I used GridSearchCV to tune parameters such as the number of estimators, maximum depth, and more.
+
+Error Visualization:
+
+I used confusion matrices to identify errors and understand the most frequent misclassifications between classes.
+
+4. File: Mnist-Multilabel
+   
+In this file, I explored multilabel classification, where a sample can belong to multiple classes simultaneously. For example, I classified digits based on properties like:
+
+Even or Odd
+
+Greater than or Less than 5
+
+Creating Multilabel Targets:
+
+I created labels derived from the characteristics of the original digits to form a multilabel dataset.
+
+Models Used:
+
+KNeighborsClassifier: 
+
+For initial multilabel predictions.
+
+ClassifierChain with RandomForestClassifier: 
+
+To handle dependencies between labels.
+
+Evaluation Metrics:
+
+I used F1-score with macro averaging to measure the model's performance.
+
+5. File:
+
+Data-Augmentation
+
+In this file, I used data augmentation techniques to increase the diversity of the training set. The main technique used was shifting the images in multiple directions (right, left, up, and down).
+
+What Was Done:
+
+Data Augmentation: 
+
+Created shifted images to increase the number of examples in the training set.
+
+Error Visualization: 
+
+Analyzed confusion matrices to visualize how data augmentation affected the model's performance.
+
+Results
+
+The final model was evaluated using various metrics:
+
+Accuracy
+
+Recall
+
+F1-Score
+
+The models were evaluated based on confusion matrices.
